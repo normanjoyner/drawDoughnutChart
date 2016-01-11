@@ -37,6 +37,7 @@
         ratioFont: 1.5,
         shortInt: false,
         tipClass: "doughnutTip",
+        tipUnit: "",
         summaryClass: "doughnutSummary",
         summaryTitle: "TOTAL:",
         summaryTitleClass: "doughnutSummaryTitle",
@@ -158,7 +159,7 @@
     function pathMouseEnter(e) {
       var order = $(this).data().order;
       if (settings.showTip) {
-        $tip.text(data[order].title + ": " + data[order].value)
+        $tip.text(data[order].title + ": " + data[order].value + " " + settings.tipUnit)
             .fadeIn(200);
       }
       if(settings.showLabel) {
